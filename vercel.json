@@ -1,6 +1,6 @@
 {
     "buildCommand" : "cd delicious && npm install && npm run build",
-    "outputDirectory" : "client/dist",
+    "outputDirectory" : "delicious/dist",
     "framework": "create-react-app",
     "rewrites" : [
         {
