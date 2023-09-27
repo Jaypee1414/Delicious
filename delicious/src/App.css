@@ -1,0 +1,35 @@
+*{
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0% 15%;
+}
+
+h1,h2,h3{
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+}
+
+#password{
+    margin-top: 4.5rem;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1024px){
+    
+}
+
+/* TABLET */
+@media  and (min-width: 767px) and (max-width: 1023px) {
+    
+}
+
+/* SMARTPHONE */
+@media screen and (max-width: 766px) {
+    
+}
