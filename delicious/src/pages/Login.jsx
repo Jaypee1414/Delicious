@@ -10,7 +10,7 @@ function Login() {
   const navigate = useNavigate();
 
   const Login =()=>{
-    Axios.post("http://localhost:8000"), {
+    Axios.post("http://localhost:8000", {
         email: email,
         password: password
     }).then((response)=>{

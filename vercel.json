@@ -5,7 +5,7 @@
     "rewrites" : [
         {
             "source" : "/backend/(.*)",
-            "destination" : "/backend/serve.js"
+            "destination" : "/delicious/App.jsx"
         }
     ]
 }
