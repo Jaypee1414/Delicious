@@ -58,6 +58,12 @@ const BodyWrap = styled.div`
   position: relative; 
   width: 100%;
   height: 600px;
+  @media only screen and (max-width: 767px){
+    position: relative; 
+    width: 100%;
+    height: 600px;
+    
+  }
 `
 
 const Wrapper = styled.div`
@@ -132,6 +138,82 @@ const Wrapper = styled.div`
 
   #password{
     margin-top: 4.5rem;
+  }
+
+  @media only screen and (max-width: 767px){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    width: 100%;
+    height: 25rem;
+  
+    input{
+      position: absolute;
+      width: 70%;
+      height: 3rem;
+      left: 50%;
+      right: 50%; 
+      top: 35%;
+      transform: translate(-50%, -50%);
+      outline: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+    }
+  
+    h1{ 
+      margin: 2.5rem;
+      font-size: 2rem;
+  
+    }
+    button{
+      height: 3rem;
+      width: 70%;
+      position: absolute;
+      background: transparent;
+      border-radius: 3px;
+      border: 2px solid #BF4F74;
+      color: #BF4F74;
+      padding: 0.25em 1em;
+      left: 50%;
+      right: 50%; 
+      top: 73%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(35deg, #494949, #313131);
+      border: black;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      
+      &:hover{
+        cursor: pointer;
+      }
+  
+    }
+  
+    p{
+      position: absolute;
+      color: black;
+      text-decoration: underline;
+      left: 40%;
+      right: 50%; 
+      top: 85%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+      margin-left: 2rem;
+      &:hover{
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  
+    #password{
+      margin-top: 4.5rem;
+    }
+    
   }
   `
 

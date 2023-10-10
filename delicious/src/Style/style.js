@@ -6,6 +6,15 @@ export const Wrapper = styled.div`
     svg{
         color:red;
     }
+
+    
+    @media screen and (max-width: 767px){
+        margin: 4rem 0rem;
+
+        svg{
+            color:red;
+        }
+      
 `;
 
 export const Card = styled.div`
@@ -39,6 +48,45 @@ export const Card = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+     
+    @media only screen and (max-width: 767px){
+      
+        
+        min-height: 12rem;
+        min-width: 7rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            
+            border-radius: 1rem;
+            position: absolute;
+            left: 0;
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p{
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            bottom:6%;
+            transform: translate(-50%, 0%);
+            color: white;
+            width: 100%
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            font-weight: 600;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 `;
 

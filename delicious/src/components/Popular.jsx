@@ -6,6 +6,7 @@ import "@splidejs/splide/dist/css/splide.min.css"
 import {Wrapper, Gradient, Card} from '../Style/style'
 import {FaFire} from 'react-icons/fa'
 import { Link } from "react-router-dom";
+
 function Popular() {
     const [Popular , setPopular] = useState([]);
     useEffect (()=>{
@@ -30,7 +31,7 @@ function Popular() {
                 <Wrapper>
                     <h1>Popular Picks <FaFire/> </h1>
                         <Splide options={{
-                            perPage: 4,
+                            perPage: 3,
                             arrows: false,
                             pagination: false,
                             drag: "free",

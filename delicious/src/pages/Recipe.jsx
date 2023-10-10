@@ -77,6 +77,39 @@ const DetailWrapper = styled.div`
   div{
     display: fixed;
   }
+
+     
+  @media only screen and (max-width: 767px){
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    display:flex;
+    .active{
+      background: linear-gradient(35deg, #494949, #313131);
+      color: white;
+    }
+    h2{
+      margin-top: -4rem;
+      width: 100%;
+      margin-left: -2rem;
+    }
+    li{
+      font-size: 1.2rem;
+      line-height: 2.5rem
+    }
+    ul{
+      margin-top: 2rem;
+    }  
+    div{
+      display: fixed;
+    }
+
+    img{
+      width:100%;
+      height:18rem;
+      border-radius: 5%;
+    }
+    
+  }
 `;
 
 const Button = styled.button`
@@ -86,9 +119,25 @@ const Button = styled.button`
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
+
+  @media only screen and (max-width: 767px){
+    position: relative;
+    padding: 1rem 2rem;
+    color: #313131;
+    background: white;
+    border: 2px solid black;
+    margin-right: 1rem;
+    font-weight: 600;
+  }
 `;
 
 const Info = styled.div`
   margin-left: 10rem;
+  @media only screen and (max-width: 767px){
+  width: 85%;
+  margin-top: 25rem;
+  position: absolute;
+  left: -7rem;
+  }
 `;
 export default Recipe

@@ -1,4 +1,5 @@
 import {FaPizzaSlice, FaHamburger} from "react-icons/fa";
+import {CgProfile} from "react-icons/cg";
 import {GiNoodles, GiChopsticks, GiForkKnifeSpoon} from "react-icons/gi";
 import {BiHomeAlt2} from "react-icons/bi";
 import { NavLink } from "react-router-dom";
@@ -9,19 +10,22 @@ function Category() {
     const [active, setActive] = useState("Home")
   return (
     <List>
+
+        
         <Slink to={`/Home`}>
             <div>
                 <BiHomeAlt2/>
                 <h4>Home</h4>
             </div>
         </Slink>
+
         <Slink to={`/cuisine/Italian`}>
             <div>
                 <FaPizzaSlice/>
                 <h4>Italian</h4>
             </div>
         </Slink>
-        
+
         <Slink to={`/cuisine/Mexican`}>
             <div>
                 <FaHamburger/>
@@ -49,6 +53,14 @@ function Category() {
                 <h4>Asian</h4>
             </div>
         </Slink>
+
+        <Slink to={`/Profile`}>
+            <div>
+                <CgProfile/>
+                <h4>Profile</h4>
+            </div>
+        </Slink>
+
     </List>
   )
 }
@@ -57,6 +69,16 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 5rem 2rem;
+    width: 100%;
+
+    
+    
+    @media screen and (max-width: 767px){
+        display: flex;
+        justify-content: center;
+        margin: 5rem 0rem;
+        width: 100%;
+    }
 `;
 
 const Slink = styled(NavLink)`
@@ -92,6 +114,43 @@ const Slink = styled(NavLink)`
         color: white;
         font-size: 1.8rem;
     }
+
+    
+    @media screen and (max-width: 767px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 0rem;
+        text-decoration: none;
+        width: 15rem;
+        height: 3rem; 
+        cursor: pointer;
+        transform: scale(0.8);
+        background: linear-gradient(35deg, #494949, #313131);
+
+        &.active{
+            background: linear-gradient(to right, #f27121, #e94057);
+            h4{
+                color:white;
+            }
+            svg{
+                color:white;
+            }
+        }
+
+        h4{
+            color: white;
+            font-size: 0.5rem;
+        }
+
+        svg{
+            color: white;
+            font-size: 1rem;
+        }
+    }
 `;
+
 
 export default Category

@@ -44,6 +44,18 @@ const Wrapper = styled.div`
       transition: 0.2s;
     }
   }
+
+  @media only screen and (max-width: 767px){
+    margin-top: -2rem;
+    positive: absolute;
+    width: 100%;
+  
+    img{
+      margin-top: -1rem;
+      margin-left: -2rem;
+    }
+  
+}
 `;
 
 export default logo
