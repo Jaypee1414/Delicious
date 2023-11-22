@@ -26,10 +26,12 @@ function Login() {
   const login=()=>{
     if(email == "user" && password == "user"){
       navigate("/home")
+      return
     }
 
     if(email == "admin" && password == "admin"){
       navigate("/Admin")
+      return
     }
   }
 
