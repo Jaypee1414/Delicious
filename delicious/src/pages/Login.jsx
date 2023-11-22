@@ -24,14 +24,12 @@ function Login() {
 
 
   const login=()=>{
-    if(email == "user" && password == "user"){
-      navigate("/home")
-      return
+    if(email === "admin" && password === "admin"){
+      navigate("/Admin");
+      
     }
-
-    if(email == "admin" && password == "admin"){
-      navigate("/Admin")
-      return
+    if(email === "user" && password === "user"){
+      navigate("/home"); 
     }
   }
 
@@ -43,7 +41,7 @@ function Login() {
             id="email" 
             type='email' 
             placeholder='Enter Email'
-            onChange={(e) => setEmail(e.target  .value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <br/>
 
@@ -54,12 +52,11 @@ function Login() {
             onChange={(e) =>setPassword(e.target.value)}
           />
           <br/>
-          <NavLink to={'/home'}>
             {/* TEMPORATY NAVLINK */}
             <button onClick={login}>
               Login
             </button>
-          </NavLink>
+          
             
             <NavLink to={'/Signup'}>
               <p>Create an Account?</p>

@@ -1,6 +1,7 @@
 import {FaPizzaSlice, FaHamburger} from "react-icons/fa";
 import {CgProfile} from "react-icons/cg";
 import {GiNoodles, GiChopsticks, GiForkKnifeSpoon} from "react-icons/gi";
+import { CiLogout } from "react-icons/ci";
 import {BiHomeAlt2} from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { useState } from "react"; 
@@ -61,6 +62,13 @@ function Category() {
             </div>
         </Slink>
 
+        
+        <Slink to={`/`}>
+            <div>
+                <CiLogout/>
+                <h4>Logout</h4>
+            </div>
+        </Slink>
     </List>
   )
 }
