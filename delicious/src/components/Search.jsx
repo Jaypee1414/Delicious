@@ -63,7 +63,6 @@ const FormStyle = styled.form`
         margin-right: 30%;
 
         div{
-            border: 1px solid black;
             position:relative;
             margin-left: 0%;
             margin-right: 30%;
@@ -72,7 +71,7 @@ const FormStyle = styled.form`
             input{
                 margin-right: 30%;
                 position: relative;
-                width:40%;
+                width:30%;
                 border:none;
                 background: linear-gradient(35deg, #494949 , #313131);
                 font-size: 1.5rem;

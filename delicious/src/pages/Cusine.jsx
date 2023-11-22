@@ -15,6 +15,7 @@ function Cusine() {
 
     const recipes = await data.json();
     setCusine(recipes.results);
+
   }
 
 useEffect(()=>{
@@ -55,8 +56,9 @@ const Grid = styled(motion.div)`
 `;
 
 const Card = styled.div`
+margin-right: 2rem;
   img{
-    width: 100%;
+    width: 90%;
     border-radius: 2rem;
   }
   a{

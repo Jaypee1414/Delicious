@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { styled } from 'styled-components'
 import { useNavigate, NavLink } from "react-router-dom";
-import Axios from 'axios'
+import Axios from 'axios';
 
 function Register() {
     const [username ,setUsername] = useState("");
@@ -49,7 +49,7 @@ function Register() {
             type='password' 
             placeholder='Password' 
             name='password' 
-            onChange={(e)=>{setPassword(e.target.value)}}
+            onChange={(e)=> {setPassword(e.target.value)}}
             />
 
             <button onClick={register}>

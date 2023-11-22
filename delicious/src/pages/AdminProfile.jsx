@@ -2,36 +2,34 @@ import React, { useEffect, useState } from 'react'
 import styled from "styled-components"
 import {motion} from "framer-motion"
 import { Link,useParams } from 'react-router-dom'
-import  Category  from "../components/Category"
-import  Search  from "../components/Search"
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
-function Profile() {
-  const [cusine, setCusine] = useState([]);
-  let params = useParams();
-  const getCusine = async (name) =>{
-    const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=30`);
-
-    const recipes = await data.json();
-    setCusine(recipes.results);
-
-  }
-
-useEffect(()=>{
-  getCusine("Mexican");
-},[]);
-
+function AdminProfile() {
+    const [cusine, setCusine] = useState([]);
+    let params = useParams();
+    const getCusine = async (name) =>{
+      const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=30`);
+  
+      const recipes = await data.json();
+      setCusine(recipes.results);
+  
+    }
+  
+  useEffect(()=>{
+    getCusine("Japanese");
+  },[]);
   return (
     <Wrapper>
-      <Details>
-        <h1>ACCOUNT NAME</h1>
-        <h3>Name: GOJO SATURO </h3>
-        <p>Anonymous</p>
-      </Details>
-      <Add>
-        <button>Add File</button>
-        <br/>
-      </Add>
-      <Grid
+    <Details>
+      <h1>ACCOUNT NAME</h1>
+      <h3>Name: SUKUNA</h3>
+      <p>Anonymous</p>
+    </Details>
+    <Add>
+      <br/>
+    </Add>
+    <Grid
       animate={{opacity: 1}}
       initial={{opacity: 0}}
       exit={{opacity: 0}}
@@ -44,13 +42,17 @@ useEffect(()=>{
               <img src={item.image} alt="item.title"/>
               <h4>{item.title}</h4>
             </Link>
+            <div id="icon">
+                <AiOutlineCloseCircle/> <AiOutlineCheckCircle/>
+            </div> 
           </Card>
         )
       })}
     </Grid>
-    </Wrapper>
+  </Wrapper>
   )
 }
+
 
 const Wrapper = styled.div`
   position: relative;
@@ -116,6 +118,7 @@ const Add = styled.div`
   `
 
   
+  
 const Grid = styled(motion.div)`
 padding-top: 15rem;
 display: grid;
@@ -137,6 +140,10 @@ h4{
   text-align: center;
   padding: 1rem;
 }
+#icon{
+    font-size: 2rem;
+    margin-left: 6rem;
+}
 `;
 
-export default Profile
+export default AdminProfile

@@ -39,13 +39,13 @@ function Popular() {
                         }}>
                             {Popular.map((recipes)=>{
                             return(
-                                <SplideSlide key={recipes.id}>
+                                    <SplideSlide key={recipes.id}>
                                         <Card >  
                                             <Link to={"/recipe/" + recipes.id}>  
                                                 <p>{recipes.title}</p>
                                                 <img src={recipes.image} alt={recipes.title}/>
                                                 <Gradient/>
-                                            </Link>
+                                            </Link> 
                                         </Card>
                                 </SplideSlide>
                             )

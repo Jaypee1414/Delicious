@@ -6,6 +6,8 @@ import Recipe from "./Recipe"
 import Login from "./Login"
 import Register from "./Register"
 import Profile from "./Profile"
+import Admin from "./Admin"
+import AdminProfile from "./AdminProfile"
 
 function Pages() {
   return (
@@ -18,6 +20,8 @@ function Pages() {
         <Route path="/cuisine/:type" element={<Cusine/>}/>
         <Route path="/searched/:search" element={<Searched/>}/>
         <Route path="/recipe/:name" element={<Recipe/>}/>
+        <Route path="/Admin" element={<Admin/>}/>
+        <Route path="/Admin/Profile" element={<AdminProfile/>}/>
       </Routes>
     </div>
   )
