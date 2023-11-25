@@ -48,13 +48,6 @@ function AdminCategory() {
         </div>
     </Slink>
 
-    <Slink to={`/cuisine/Asian`}>
-        <div>
-            <GiForkKnifeSpoon/>
-            <h4>Asian</h4>
-        </div>
-    </Slink>
-
     <Slink to={`/Admin/Profile`}>
         <div>
             <CgProfile/>
@@ -83,8 +76,8 @@ const List = styled.div`
     @media screen and (max-width: 767px){
         display: flex;
         justify-content: center;
-        margin: 5rem 0rem;
-        width: 100%;
+        margin:  5rem -3.5rem;
+        width: 100vw;
     }
 `;
 
@@ -124,6 +117,7 @@ const Slink = styled(NavLink)`
 
     
     @media screen and (max-width: 767px){
+        font-size: 0.3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

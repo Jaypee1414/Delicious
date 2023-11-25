@@ -48,12 +48,6 @@ function Category() {
             </div>
         </Slink>
 
-        <Slink to={`/cuisine/Asian`}>
-            <div>
-                <GiForkKnifeSpoon/>
-                <h4>Asian</h4>
-            </div>
-        </Slink>
 
         <Slink to={`/Profile`}>
             <div>
@@ -84,8 +78,9 @@ const List = styled.div`
     @media screen and (max-width: 767px){
         display: flex;
         justify-content: center;
-        margin: 5rem 0rem;
-        width: 100%;
+        margin: 5rem -3.5rem;
+        width: 100vw;
+        
     }
 `;
 
@@ -114,8 +109,9 @@ const Slink = styled(NavLink)`
     }
 
     h4{
-        color: white;
+        
         font-size: 0.8rem;
+        color: white;
     }
 
     svg{
@@ -125,14 +121,15 @@ const Slink = styled(NavLink)`
 
     
     @media screen and (max-width: 767px){
+        font-size: 0.3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
+        border-radius: 90%;
         margin-right: 0rem;
         text-decoration: none;
-        width: 15rem;
+        width: 9rem;
         height: 3rem; 
         cursor: pointer;
         transform: scale(0.8);
@@ -150,12 +147,11 @@ const Slink = styled(NavLink)`
 
         h4{
             color: white;
-            font-size: 0.5rem;
         }
 
         svg{
             color: white;
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
     }
 `;
