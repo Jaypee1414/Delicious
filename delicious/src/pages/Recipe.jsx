@@ -29,6 +29,7 @@ function Recipe() {
       <div>
        <h2>{details.title}</h2>
        <img src={details.image} alt="details.title"/>
+       <iframe width="100%" height="345" src="https://www.youtube.com/embed/w4SUu0bdEiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <Info>
         <Button className={active === "Instruction" ? `active` : ""} onClick={() => setActive(`Instruction`)}>Instruction</Button>
@@ -135,7 +136,7 @@ const Info = styled.div`
   margin-left: 10rem;
   @media only screen and (max-width: 767px){
   width: 85%;
-  margin-top: 25rem;
+  margin-top: 45rem;
   position: absolute;
   left: -7rem;
   }
