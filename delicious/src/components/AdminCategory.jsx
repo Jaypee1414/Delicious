@@ -44,7 +44,7 @@ function AdminCategory() {
     <Slink to={`/cuisine/Japanese`}>
         <div>
             <GiChopsticks/>
-            <h4>Japanese</h4>
+            <h4>Japan</h4>
         </div>
     </Slink>
 
